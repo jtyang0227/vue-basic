@@ -1,13 +1,34 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <header id="nav">
+      <nav>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>|
+        <router-link to="/jobs">Jobs</router-link> |
+        <router-link to="/news">news</router-link>
+        <hr>
+      </nav>
+<!--      <b>1. 데이터 바인딩 : {{ 바인딩데이터 }}</b>-->
+    </header>
+
+    <main id="content">
+      <router-view />
+    </main>
+
+    <footer id="footer" />
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    바인딩데이터: {
+      type: Number,
+      default: 100
+    },
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -24,9 +45,5 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
