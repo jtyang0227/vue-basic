@@ -3,35 +3,35 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-const Home = import("../views/Home.vue");
-const About = import("../views/About.vue");
-const Login = import("../views/Login.vue");
-const JobsView = import("../views/JobsView.vue");
-const NewsView = import("../views/NewsView.vue");
+const Home = () => import("../views/Home.vue");
+const About = () => import("../views/About.vue");
+const Login = () => import("../views/Login.vue");
+const JobsView = () => import("../views/JobsView.vue");
+const NewsView = () => import("../views/NewsView.vue");
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => Home,
+    component: Home,
   },
   {
     path: "/login",
     name: "Login",
-    component: () => Login,
+    component: Login,
   },
   {
     path: "/about",
     name: "About",
-    component: () => About,
+    component: About,
   },
   {
     path: '/jobs',
-    component: () => JobsView,
+    component: JobsView,
   },
   {
     path: "/news",
-    component: () => NewsView,
+    component: NewsView,
   }
 ];
 

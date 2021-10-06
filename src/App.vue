@@ -8,8 +8,8 @@
         <router-link to="/news">news</router-link>
         <hr>
       </nav>
-<!--      <b>1. 데이터 바인딩 : {{ 바인딩데이터 }}</b>-->
     </header>
+    <!--      <b>1. 데이터 바인딩 : {{ 바인딩데이터 }}</b>-->
 
     <main id="content">
       <router-view />

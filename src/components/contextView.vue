@@ -21,6 +21,7 @@
         <slot name="text"></slot>
       </div>
     </div>
+
     <!--    <div v-for="result in results"-->
     <!--         :key="result"-->
     <!--    >{{ result }}-->
@@ -30,7 +31,7 @@
 
 <script>
 export default {
-  name: "context",
+  name: "contextView",
   data() {
     return {
       msgStr: 'Hello'
