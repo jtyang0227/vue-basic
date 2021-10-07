@@ -26,7 +26,7 @@ export default {
     pushMessages: function () {
       if (undefined === this.emitData || null === this.emitData || "" === this.emitData) {
         alert('값을 입력해주세요.');
-        return false;
+        return;
       }
 
       this.$emit('message', {message: this.emitData});
